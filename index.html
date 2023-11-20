@@ -14,42 +14,79 @@
 <body>
     <header>
         <h1>Thomas Jack</h1>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <nav>
+            <ul class="navLinks">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <div class="container">
-        <aside id="aboutMe">
+    
+
+    <main class="container">
+
+        <section id="aboutMe">
             <h2 class="heading">About<br>Me</h2>
-        </aside>
+        </section>
 
-        <article id="blurb">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cumque saepe laboriosam, et explicabo voluptas aspernatur repellendus, quidem neque ducimus consequatur nobis fugiat? Inventore sed blanditiis vitae voluptas, quisquam eos?</p>
-        </article>
+        <section id="blurb">
+            <img class="profileImage" src="./assets/images/round pic ot.png"
+                alt="a man carrying a child in a backpack laughing and throwing leaves into the air">
 
-        <aside id="myWork">
+            <p><strong id="opening">Hello</strong> my name is Thomas. I'm currently studying front-end web development.
+                I'm loving it but it's tough! I'm
+                currently the Head of Logistics for a large brewery group in the UK. It's an incredibly tough
+                & fast-paced industry so I hope this will prepare me well for an industry in tech. (and this course).</p>
+            <p>
+            I have wonderful little boy who is five and in year 1 at school. He says the sweetest things, and I hope he
+            keeps miss-pronouncing things for a long time as it is very cute.
+            </p>
+        </section>
+
+        <section id="myWork">
             <h2 class="heading">My<br>Work</h2>
-        </aside>
+        </section>
+
 
         <article id="work-1">work1</article>
         <article id="work-2">work2</article>
         <article id="work-3">work3</article>
-        <aside id="contactMe" class="heading">Contact Me</aside>
+
+
+        <section id="contactMe">
+            <h2 class="heading">Contact<br>Me</h2>
+        </section>
+        
+
         <form id="form">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+            <dotlottie-player src="https://lottie.host/78b56ce6-9d2e-4c36-910d-f710104e590d/sExOMWtnoK.json" background="transparent" speed="1" style="width: 150px; height: 150px" direction="1" mode="normal" loop autoplay></dotlottie-player>
 
-        </form>    
+            <form action="/action_page.php">
+                <label for="firstName">First name:</label>
+                <input type="text" id="firstName" name="firstName">
 
-        </div>
+                <label for="lastName">Last name:</label>
+                <input type="text" id="lastName" name="lastName">
+
+                <label for="freeform">Send me a message:</label>
+                <br>
+                
+                <textarea id="freeform" name="freeform" rows="4" cols="50"></textarea>
+
+                <button type="submit" form="nameform" value="Submit">Submit</button>
+            </form>
+
     </main>
 
     <footer>
+        
         <h4>this is a palceholder </h4>
+        
     </footer>
-    
+
 </body>
 
 </html>

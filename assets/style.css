@@ -1,37 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:ital,wght@0,300;1,700&display=swap');
+
 body {
   margin: 0;
-  background: rgb(91, 91, 99);
-  background: linear-gradient(
-    0deg,
-    rgba(91, 91, 99, 1) 10%,
-    rgba(31, 49, 59, 1) 50%,
-    rgba(2, 101, 121, 1) 100%
-  );
+  padding: 0;
+  background: rgb(3, 3, 11);
 }
 
 /* Root Variation */
 :root {
-  --background-color: rgb(235, 235, 235);
-  --border-right: 5px solid rgb(244, 108, 24);
+  --background-color: darkslategray;
+  --border-right: 5px dotted darkslategray;
+  --font-family: Montserrat, sans-serif;
 }
 
+/* Header */
+header {
+  top: 0;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px, 10%;
+  background-color: rgb(3, 3, 11);
+}
+
+h1 {
+  color: darkslategray;
+  font-family: Montserrat, sans-serif;
+  font-size: 36px;
+  cursor: pointer;
+  padding-left: 30px;
+
+}
+
+ul, li, a {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: darkslategray;
+  text-decoration: none;
+}
+
+.navLinks {
+  list-style: none;
+}
+
+.navLinks li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navLinks li a {
+  transition: all 0.3s ease 0s;
+}
+
+nav {
+  margin-right: 10px;
+}
+
+/* Main */
 .container {
   width: 90vw;
-  height: 90vh;
+  height: 100vh;
 
   /* Grid Settings */
   display: grid;
-  grid-template-columns: 0fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 160px 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
   padding: 10px;
+  padding-top: 50px;
+  padding-bottom: 0px;
   box-sizing: border-box;
 }
-/*
-.container div {
-  padding: 10px;
-  border: 2px solid black;
-}*/
 
 #aboutMe {
   grid-column-start: 1;
@@ -40,11 +83,31 @@ body {
 }
 
 #blurb {
+  display: flex;
+  align-items: center;
   grid-column-start: 2;
   grid-column-end: 4;
   background-color: var(--background-color);
+  border-radius: 5px;
+  font-family: var(--font-family);
+  color: rgb(176, 180, 180);
+  padding: 15px;
+  font-size: 20px;
+  gap: 40px;
+  align-items: center;
 }
 
+#opening {
+  font-family: var(--font-family);
+  font-size: 30px;
+  color: rgb(176, 180, 180);
+}
+
+.profileImage {
+  height: 80px;
+  margin-left: 20px;
+  padding: 10px;
+}
 #myWork {
   grid-row-start: 4;
   grid-row-end: 2;
@@ -56,24 +119,33 @@ body {
   grid-column-end: span 2;
   grid-row-start: 2;
   background-color: var(--background-color);
+  background-image: url(./images/code-refactor_b&W.jpg);
+  background-repeat: no-repeat;
+  background-size: 102%;
+  border-radius: 5px;
 }
+
+
 
 #work-2 {
   grid-column-start: 2;
   grid-column-end: span 1;
   grid-row-start: 3;
   background-color: var(--background-color);
+  border-radius: 5px;
+
+
 }
 
 #work-3 {
   grid-column-start: 3;
   background-color: var(--background-color);
+  border-radius: 5px;
 }
 
 #contactMe {
   grid-row-start: 4;
   border-right: var(--border-right);
-  padding: 10px;
   
 }
 
@@ -81,8 +153,8 @@ body {
   grid-column-start: 2;
   grid-column-end: span 2;
   grid-row-start: 4;
-  background-color: lightslategray;
-  border-radius: 10px;
+  background-color: darkslategray;
+  border-radius: 5px;
 }
 
 .heading {
@@ -90,6 +162,32 @@ body {
   font-weight: 900;
   font-size: 24px;
   text-align: right;
-  padding-right: 10px;
+  padding-right: 30px;
+  color: darkslategray;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  color: rgb(176, 180, 180);
+  font-family: var(--font-family)
+  
+  
+}
+
+#firstName, #lastName, #freeform {
+  border-radius: 5px;
+  margin: 10px;
+  max-height: 30px;
+  
+  
+}
+
+
+footer {
   color: white;
+  background-color: rgb(133, 133, 215);
+  height: 120px;
 }
