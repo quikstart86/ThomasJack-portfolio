@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/28729d06ff.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,50 +22,76 @@
             </ul>
         </nav>
     </header>
-<section class="hero">
-    <img src="./assets/images/pixel-background.jpg" alt="man with code on his face">
-    <h2>Lets Go!</h2>
-</section>
-    
-<!-- Main content (About/Work/Contact) -->
+
+
+    <section class="hero">
+        <img src="./assets/images/pixel-background.jpg" alt="Pink and purple geometric background">
+        <h2>Lets Go!</h2>
+    </section>
+
+    <!-- Main content (About/Work/Contact) -->
     <main class="container">
-<!-- About -->
+        <!-- About -->
         <section id="aboutMe">
             <h2 class="heading">About<br>Me</h2>
         </section>
-<!-- Bio/blurb -->
+        <!-- Bio/blurb -->
         <section id="blurb">
             <img class="profileImage" src="./assets/images/round pic ot.png"
                 alt="a man carrying a child in a backpack laughing and throwing leaves into the air">
-
             <p><strong id="opening">Hello</strong> my name is Thomas. I'm currently studying front-end web development.
                 I'm loving it but it's tough! I'm
                 currently the Head of Logistics for a large brewery group in the UK. It's an incredibly tough
-                & fast-paced industry so I hope this will prepare me well for an industry in tech. (and this course).</p>
+                & fast-paced industry so I hope this will prepare me well for an industry in tech. (and this course).
+            </p>
             <p>
-            I have wonderful little boy who is five years old and now in year 1 at school. He says the sweetest things, and I hope he
-            keeps miss-pronouncing things for a long time as it is very cute.
+                I have wonderful little boy who is five years old and now in year 1 at school. He says the sweetest
+                things, and I hope he
+                keeps miss-pronouncing things for a long time as it is very cute.
             </p>
         </section>
-<!-- My Work -->
+
+        <!-- My Work -->
         <section id="myWork">
             <h2 class="heading">My<br>Work</h2>
         </section>
 
 
-        <a href="https://quikstart86.github.io/horeison-code-refactor/" id="work-1"></a>
-        <a href="https://www.pexels.com/photo/anonymous-person-in-clear-water-7204553/" id="work-2"></a>
-        <a href="https://www.pexels.com/photo/green-pineapple-fruit-with-brown-framed-sunglasses-beside-yellow-surface-1161547/" id="work-3"></a>
+        <div id="work-1">
+            <a href="https://quikstart86.github.io/horeison-code-refactor/"></a>
+            <div class="textContainer1">
+            <p>Code Refactor</p>
+            </div>
+        </div>
+        
+        
+        <div id="work-2">
+            <a href="https://www.pexels.com/photo/black-and-white-quote-print-225250/"></a>
+            <div class="textContainer2">
+            <p>What do you see?</p>
+            </div>
+        </div>
 
-<!-- Contact Me -->
+        <div id="work-3">
+            <a href="https://www.pexels.com/photo/green-pineapple-fruit-with-brown-framed-sunglasses-beside-yellow-surface-1161547"></a>
+            <div class="textContainer3">
+            <p>Diary of a Dev Bootcamper...</p>
+            </div>
+        </div>
+
+
+        <!-- Contact Me -->
         <section id="contactMe">
             <h2 class="heading">Contact<br>Me</h2>
         </section>
-        
-<!-- Contact form -->
+
+        <!-- Contact form -->
         <form id="form">
-            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-            <dotlottie-player src="https://lottie.host/78b56ce6-9d2e-4c36-910d-f710104e590d/sExOMWtnoK.json" background="transparent" speed="0.8" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay>
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                type="module"></script>
+            <dotlottie-player src="https://lottie.host/78b56ce6-9d2e-4c36-910d-f710104e590d/sExOMWtnoK.json"
+                background="transparent" speed="0.8" style="width: 300px; height: 300px" direction="1" mode="normal"
+                loop autoplay>
             </dotlottie-player>
 
             <form action="/action_page.php">
@@ -76,19 +103,21 @@
 
                 <label for="freeform">Send me a message:</label>
                 <br>
-                
-                <textarea id="freeform" name="freeform" rows="4" cols="50"></textarea>
 
+                <textarea id="freeform" name="freeform" rows="4" cols="50"></textarea>
                 <button type="submit" form="nameform" value="Submit">Submit</button>
             </form>
 
     </main>
 
-<!-- Footer -->
+    <!-- Footer -->
     <footer>
+
+        <h3> &copy; Thomas Jack 2023. All rights reserved </h3>
+        <i class="fa-brands fa-linkedin-in fa-2xl" href="https://www.linkedin.com/in/thomastjack"></i>
+        <i class="fa-brands fa-github fa-2xl" href="https://github.com/quikstart86"></i>
         
-        <h4> &copy; Thomas Jack 2023. All rights reserved </h4>
-        
+
     </footer>
 
 </body>

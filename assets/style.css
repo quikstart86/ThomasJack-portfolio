@@ -4,6 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   margin: 0;
   padding: 0;
@@ -13,8 +14,10 @@ body {
 /* Root Variation */
 :root {
   --background-color: darkslategray;
-  --border-right: 5px dotted darkslategray;
+  --border-right: 5px dotted #4da1a1;
   --font-family: Montserrat, sans-serif;
+  --headings-nav-colors: #4da1a1;
+  --body-text: #e6e6e6;
 }
 
 /* Header */
@@ -23,21 +26,21 @@ header {
   position: sticky;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   background-color: rgb(3, 3, 11);
+  z-index: 100;
 }
 
 h1 {
-  color: darkslategray;
+  color: var(--headings-nav-colors);
   font-family: Montserrat, sans-serif;
   font-size: 42px;
   cursor: pointer;
   padding-left: 30px;
 
 }
-
+/* h1 hover */
 h1:hover {
   transition: all 0.3s ease 0s;
   color: aqua;
@@ -47,7 +50,7 @@ ul, li, a {
   font-family: Montserrat, sans-serif;
   font-weight: 700;
   font-size: 20px;
-  color: darkslategray;
+  color: var(--headings-nav-colors);
   text-decoration: none;
 }
 
@@ -91,11 +94,9 @@ nav {
 }
 
 
-/* Main */
+/* Main - Grid Settings */
 .container {
   width: 80vw;
-
-  /* Grid Settings */
   display: grid;
   justify-content: center;
   grid-template-columns: 160px 1fr 1fr;
@@ -104,8 +105,9 @@ nav {
   padding: 10px;
   padding-top: 50px;
   padding-bottom: 50px;
-  /* box-sizing: border-box; */
+  /* box-sizing: border-box; - do I need this?*/
 }
+
 
 #aboutMe {
   grid-column-start: 1;
@@ -122,7 +124,7 @@ nav {
   background-color: var(--background-color);
   border-radius: 5px;
   font-family: var(--font-family);
-  color: rgb(176, 180, 180);
+  color: var(--body-text);
   padding: 30px;
   font-size: 20px;
   gap: 40px;
@@ -133,7 +135,7 @@ nav {
 #opening {
   font-family: var(--font-family);
   font-size: 30px;
-  color: rgb(176, 180, 180);
+  color: var(--body-text);
 }
 
 .profileImage {
@@ -152,6 +154,7 @@ nav {
 }
 
 #work-1 {
+  position: relative;
   grid-column-start: 2;
   grid-column-end: span 2;
   grid-row-start: 2;
@@ -163,11 +166,27 @@ nav {
   cursor: pointer;
 }
 
+.textContainer1 {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+  background-color: rgba(77, 161, 161, 0.92);
+  color: #03030b;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+}
+
 #work-1:hover {
   background-image: url(./images/code-refactor.png);
 }
 
 #work-2 {
+  position: relative;
   grid-column-start: 2;
   grid-column-end: span 1;
   grid-row-start: 3;
@@ -175,17 +194,49 @@ nav {
   border-radius: 5px;
   background-image: url(/assets/images/work2_coding\ img.jpg);
   background-size: 40%;
-  
+  cursor: pointer;
+}
 
+.textContainer2 {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+  background-color: rgba(77, 161, 161, 0.92);
+  color: #03030b;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
 }
 
 #work-3 {
+  position: relative;
   grid-column-start: 3;
   background-color: var(--background-color);
   border-radius: 5px;
   background-image: url(/assets/images/work3_pinapple.jpg);
   background-size: 40%;
+  cursor: pointer;
 }
+
+.textContainer3 {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+  background-color: rgba(77, 161, 161, 0.92);
+  color: #03030b;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+}
+
 
 #contactMe {
   grid-row-start: 4;
@@ -207,7 +258,7 @@ nav {
   font-size: 26px;
   text-align: right;
   padding-right: 30px;
-  color: darkslategray;
+  color: var(--headings-nav-colors);
 }
 
 form {
@@ -215,7 +266,7 @@ form {
   justify-content: space-between;
   padding: 0px 40px 0px 40px;
   align-items: center;
-  color: rgb(176, 180, 180);
+  color: var(--body-text);
   font-family: var(--font-family);
   font-size: 24px;
   
@@ -230,23 +281,27 @@ form {
 
 footer {
   display: flex;
-  color: white;
-  background-color: darkslategray;
+  /* background-color: darkslategray; */
   height: 80px;
   align-items: center;
   justify-content: center;
   font-family: var(--font-family);
   font-size: 14px;
   font-weight: 100;
-  color: #03030b;
+  color: var(--headings-nav-colors);
 
 }
 
-#linkedIn {
-  height: 20px;
-  width: 20px;
-  background-color: aqua;
-  
+.fa-brands {
+padding-left: 30px;
 }
 
+.fa-linkedin-in:hover {
+  color: aqua;
+  cursor: pointer;
+}
 
+.fa-github:hover {
+  color: aqua;
+  cursor: pointer;
+}
