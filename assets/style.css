@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:ital,wght@0,300;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:ital,wght@0,300;1,700&display=swap");
 
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   margin: 0;
@@ -30,6 +29,8 @@ header {
   align-items: center;
   background-color: rgb(3, 3, 11);
   z-index: 100;
+  width: 87vw;
+  margin: 0 auto;
 }
 
 h1 {
@@ -37,8 +38,6 @@ h1 {
   font-family: Montserrat, sans-serif;
   font-size: 42px;
   cursor: pointer;
-  padding-left: 30px;
-
 }
 /* h1 hover */
 h1:hover {
@@ -46,7 +45,9 @@ h1:hover {
   color: aqua;
 }
 
-ul, li, a {
+ul,
+li,
+a {
   font-family: Montserrat, sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -66,48 +67,47 @@ ul, li, a {
 .navLinks li a:hover {
   transition: all 0.3s ease 0s;
   color: aqua;
-}
-
-nav {
-  margin-right: 10px;
+  border-bottom: 2px solid aqua;
+  padding-bottom: 10px;
 }
 
 .hero {
   display: flex;
-  height: 300px;  
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.hero img {
-  width: 80%;
+  height: 300px;
+  width: 85vw;
+  margin: 0 auto;
+  justify-content: flex-end;
+  padding-right: 20px;
+  margin-top: 30px;
+  background-image: url("./images/pixel-background.jpg");
+  background-position: center;
+  background-size: cover;
   border: solid darkslategray 6px;
 }
 
 .hero h2 {
-  position: relative;
-  top: 150px;
-  right: 300px;
+  align-self: flex-end;
   color: white;
   font-family: var(--font-family);
   font-size: 40px;
+  padding-right: 40px;
 }
-
 
 /* Main - Grid Settings */
 .container {
-  width: 80vw;
+  width: 85vw;
   display: grid;
   justify-content: center;
   grid-template-columns: 160px 1fr 1fr;
-  grid-template-rows: 300px 300px 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 30px;
-  padding: 10px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin: 0 auto;
   /* box-sizing: border-box; - do I need this?*/
 }
-
 
 #aboutMe {
   grid-column-start: 1;
@@ -117,8 +117,6 @@ nav {
 
 #blurb {
   display: flex;
-  
-  /* flex-wrap: wrap;  use this in media query for tablet/ mobile*/
   grid-column-start: 2;
   grid-column-end: 4;
   background-color: var(--background-color);
@@ -142,10 +140,11 @@ nav {
   height: 240px;
   border: solid 5px #03030b;
   border-radius: 50%;
-  /* margin-left: 20px; */
 }
 
-
+.profileImage:hover {
+  border: solid 5px aqua;
+}
 
 #myWork {
   grid-row-start: 4;
@@ -159,12 +158,18 @@ nav {
   grid-column-end: span 2;
   grid-row-start: 2;
   background-color: var(--background-color);
-  background-image: url(./images/code-refactor_b&W.jpg);
+  background-image: url(./images/code-refactor.png);
   background-repeat: no-repeat;
   background-size: 102%;
   border-radius: 5px;
-  cursor: pointer;
 }
+
+/* #work-1:hover,
+#work-2:hover,
+#work-3:hover {
+  transform: scale(1.01);
+
+} */
 
 .textContainer1 {
   position: absolute;
@@ -181,8 +186,10 @@ nav {
   font-size: 20px;
 }
 
-#work-1:hover {
-  background-image: url(./images/code-refactor.png);
+.textContainer1:hover,
+.textContainer2:hover,
+.textContainer3:hover {
+  color: aqua;
 }
 
 #work-2 {
@@ -194,7 +201,7 @@ nav {
   border-radius: 5px;
   background-image: url(/assets/images/work2_coding\ img.jpg);
   background-size: 40%;
-  cursor: pointer;
+  max-height: 310px;
 }
 
 .textContainer2 {
@@ -219,7 +226,7 @@ nav {
   border-radius: 5px;
   background-image: url(/assets/images/work3_pinapple.jpg);
   background-size: 40%;
-  cursor: pointer;
+  max-height: 310px;
 }
 
 .textContainer3 {
@@ -237,11 +244,9 @@ nav {
   font-size: 20px;
 }
 
-
 #contactMe {
   grid-row-start: 4;
   border-right: var(--border-right);
-  
 }
 
 #form {
@@ -256,7 +261,7 @@ nav {
   font-family: var(--font-family);
   font-weight: 900;
   font-size: 26px;
-  text-align: right;
+
   padding-right: 30px;
   color: var(--headings-nav-colors);
 }
@@ -269,19 +274,17 @@ form {
   color: var(--body-text);
   font-family: var(--font-family);
   font-size: 24px;
-  
 }
 
-#firstName, #lastName {
+#firstName,
+#lastName {
   border-radius: 5px;
   margin: 10px;
   font-family: var(--font-family);
 }
 
-
 footer {
   display: flex;
-  /* background-color: darkslategray; */
   height: 80px;
   align-items: center;
   justify-content: center;
@@ -289,11 +292,10 @@ footer {
   font-size: 14px;
   font-weight: 100;
   color: var(--headings-nav-colors);
-
 }
 
 .fa-brands {
-padding-left: 30px;
+  padding-left: 30px;
 }
 
 .fa-linkedin-in:hover {
@@ -304,4 +306,14 @@ padding-left: 30px;
 .fa-github:hover {
   color: aqua;
   cursor: pointer;
+}
+
+/* Screen smaller than 1600px to display flex-direction: column to allow better fitting in smaller devices */
+@media screen and (max-width: 1600px) {
+  form {
+    flex-direction: column;
+  }
+  #blurb {
+    flex-direction: column;
+  }
 }
