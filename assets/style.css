@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:ital,wght@0,300;1,700&display=swap");
 
+/* scroll behaviour */
 html {
   scroll-behavior: smooth;
 }
 
+/* body styling */
 body {
   margin: 0;
   padding: 0;
@@ -33,18 +35,21 @@ header {
   margin: 0 auto;
 }
 
+/* h1 styling */
 h1 {
   color: var(--headings-nav-colors);
   font-family: Montserrat, sans-serif;
-  font-size: 42px;
+  font-size: 36px;
   cursor: pointer;
 }
+
 /* h1 hover */
 h1:hover {
   transition: all 0.3s ease 0s;
   color: aqua;
 }
 
+/* List styling */
 ul,
 li,
 a {
@@ -55,6 +60,7 @@ a {
   text-decoration: none;
 }
 
+/* Nav links */
 .navLinks {
   list-style: none;
 }
@@ -64,6 +70,7 @@ a {
   padding: 0px 20px;
 }
 
+/* Nav links - hover */
 .navLinks li a:hover {
   transition: all 0.3s ease 0s;
   color: aqua;
@@ -71,6 +78,7 @@ a {
   padding-bottom: 10px;
 }
 
+/* hero image styling */
 .hero {
   display: flex;
   height: 300px;
@@ -85,6 +93,7 @@ a {
   border: solid darkslategray 6px;
 }
 
+/* hero h2 text position & styling */
 .hero h2 {
   align-self: flex-end;
   color: white;
@@ -106,15 +115,16 @@ a {
   padding-top: 80px;
   padding-bottom: 80px;
   margin: 0 auto;
-  /* box-sizing: border-box; - do I need this?*/
 }
 
+/* About me positioning */
 #aboutMe {
   grid-column-start: 1;
   grid-column-end: 2;
   border-right: var(--border-right);
 }
 
+/* blurb positioning & styling */
 #blurb {
   display: flex;
   grid-column-start: 2;
@@ -130,47 +140,54 @@ a {
   line-height: 1.5;
 }
 
+/* about me text */
 #opening {
   font-family: var(--font-family);
   font-size: 30px;
   color: var(--body-text);
 }
 
+/* profile image/avatar */
 .profileImage {
   height: 240px;
   border: solid 5px #03030b;
   border-radius: 50%;
 }
 
+/* profile image - hover */
 .profileImage:hover {
   border: solid 5px aqua;
 }
 
+/* Work section start*/
 #myWork {
   grid-row-start: 4;
   grid-row-end: 2;
   border-right: var(--border-right);
 }
 
+/* first project  */
 #work-1 {
   position: relative;
   grid-column-start: 2;
   grid-column-end: span 2;
   grid-row-start: 2;
   background-color: var(--background-color);
-  background-image: url(./images/code-refactor.png);
+  background-image: url(./images/horeison-img.png);
   background-repeat: no-repeat;
-  background-size: 102%;
+  background-size: cover;
   border-radius: 5px;
 }
 
-/* #work-1:hover,
+/* work-1 - hover scale */
+#work-1:hover,
 #work-2:hover,
 #work-3:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
 
-} */
-
+/* work-1 text container */
 .textContainer1 {
   position: absolute;
   display: flex;
@@ -184,14 +201,17 @@ a {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 20px;
+  border-radius: 5px;
 }
 
+/* all work - hover links */
 .textContainer1:hover,
 .textContainer2:hover,
 .textContainer3:hover {
   color: aqua;
 }
 
+/* second work area */
 #work-2 {
   position: relative;
   grid-column-start: 2;
@@ -204,6 +224,7 @@ a {
   max-height: 310px;
 }
 
+/* work-2 text container */
 .textContainer2 {
   position: absolute;
   display: flex;
@@ -217,8 +238,10 @@ a {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 20px;
+  border-radius: 5px;
 }
 
+/* third work area */
 #work-3 {
   position: relative;
   grid-column-start: 3;
@@ -229,6 +252,7 @@ a {
   max-height: 310px;
 }
 
+/* work-3 text container */
 .textContainer3 {
   position: absolute;
   display: flex;
@@ -242,13 +266,16 @@ a {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 20px;
+  border-radius: 5px;
 }
 
+/* contact me start */
 #contactMe {
   grid-row-start: 4;
   border-right: var(--border-right);
 }
 
+/* Form grid settings */
 #form {
   grid-column-start: 2;
   grid-column-end: span 2;
@@ -257,15 +284,16 @@ a {
   border-radius: 5px;
 }
 
+/* Grid heading styles */
 .heading {
   font-family: var(--font-family);
   font-weight: 900;
   font-size: 26px;
-
   padding-right: 30px;
   color: var(--headings-nav-colors);
 }
 
+/* Form CSS */
 form {
   display: flex;
   justify-content: space-between;
@@ -273,16 +301,10 @@ form {
   align-items: center;
   color: var(--body-text);
   font-family: var(--font-family);
-  font-size: 24px;
+  font-size: 22px;
 }
 
-#firstName,
-#lastName {
-  border-radius: 5px;
-  margin: 10px;
-  font-family: var(--font-family);
-}
-
+/* Footer CSS */
 footer {
   display: flex;
   height: 80px;
@@ -294,26 +316,50 @@ footer {
   color: var(--headings-nav-colors);
 }
 
+/* font-awesome padding */
 .fa-brands {
   padding-left: 30px;
 }
 
+/* linkedIn hover actions */
 .fa-linkedin-in:hover {
   color: aqua;
   cursor: pointer;
 }
 
+/* Github hover actions */
 .fa-github:hover {
   color: aqua;
   cursor: pointer;
 }
 
+/* Scroll to top */
+.fa-solid {
+  padding: 10px;
+  position: relative;
+  float: right;
+  border: 2px solid;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* scroll to top - hover */
+.fa-solid:hover {
+  color: aqua;
+}
+
 /* Screen smaller than 1600px to display flex-direction: column to allow better fitting in smaller devices */
 @media screen and (max-width: 1600px) {
+  .container {
+    grid-template-columns: 100px 1fr 1fr;
+  }
   form {
     flex-direction: column;
   }
   #blurb {
     flex-direction: column;
+  }
+  .heading {
+    font-size: 20px;
   }
 }
