@@ -219,7 +219,7 @@ a {
   grid-row-start: 3;
   background-color: var(--background-color);
   border-radius: 5px;
-  background-image: url(/assets/images/work2_coding\ img.jpg);
+  background-image: url(./images/work2_coding\ img.jpg);
   background-size: 40%;
   max-height: 310px;
 }
@@ -247,7 +247,7 @@ a {
   grid-column-start: 3;
   background-color: var(--background-color);
   border-radius: 5px;
-  background-image: url(/assets/images/work3_pinapple.jpg);
+  background-image: url(./images/work3_pinapple.jpg);
   background-size: 40%;
   max-height: 310px;
 }
