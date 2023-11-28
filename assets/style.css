@@ -82,10 +82,11 @@ a {
 .hero {
   display: flex;
   height: 300px;
-  width: 85vw;
+  width: 80vw;
   margin: 0 auto;
   justify-content: flex-end;
-  padding-right: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
   margin-top: 30px;
   background-image: url("./images/pixel-background.jpg");
   background-position: center;
@@ -99,7 +100,7 @@ a {
   color: white;
   font-family: var(--font-family);
   font-size: 40px;
-  padding-right: 40px;
+  padding-top: 180px;
 }
 
 /* Main - Grid Settings */
@@ -179,7 +180,6 @@ a {
   border-radius: 5px;
 }
 
-/* work-1 - hover scale */
 #work-1:hover,
 #work-2:hover,
 #work-3:hover {
@@ -303,6 +303,39 @@ form {
   font-family: var(--font-family);
   font-size: 22px;
 }
+/* fields styling */
+form input {
+  border-radius: 5px;
+  border:0;
+  outline: none;
+  background-color: #03030b;
+  font-family: var(--font-family);
+  font-weight: 700;
+  height: 40px;
+  margin: 5px;
+
+}
+/* text area styling */
+textarea {
+  border-radius: 5px;
+  background-color: #03030b;
+  font-family: var(--font-family);
+  font-weight: 700;
+  border: 0;
+}
+
+button {
+  background-color: #03030b;
+  border: 0;
+  color: aqua;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  margin: 5px;
+}
+
+
 
 /* Footer CSS */
 footer {
@@ -319,18 +352,26 @@ footer {
 /* font-awesome padding */
 .fa-brands {
   padding-left: 30px;
+  
+}
+
+/* font awesome email */
+.fa-regular {
+  padding-left: 30px;
+}
+
+.fa-regular:hover {
+  color: aqua;
 }
 
 /* linkedIn hover actions */
 .fa-linkedin-in:hover {
   color: aqua;
-  cursor: pointer;
 }
 
 /* Github hover actions */
 .fa-github:hover {
   color: aqua;
-  cursor: pointer;
 }
 
 /* Scroll to top */
