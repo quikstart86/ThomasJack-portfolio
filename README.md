@@ -1,4 +1,4 @@
-# My Portfolio
+# ThomasJack - Portfolio
 
 ## [Description](#description)
 
@@ -33,7 +33,9 @@ The following animation shows the web application's appearance and functionality
 
 [Static View](./assets/images/screenshot.png)
 <br>
-[Deployed Application]()
+[Deployed Application](https://quikstart86.github.io/ThomasJack-portfolio/)
+<br>
+[GitHub project repo](https://github.com/quikstart86/ThomasJack-portfolio)
 
 ## [Installation](#installation)
 
